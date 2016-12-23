@@ -46,3 +46,6 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+
+# when doing testing in stories_controller the assert_template has been extracted to a gem. To continue using it, add `gem 'rails-controller-testing'` to your Gemfile.
+gem 'rails-controller-testing'
