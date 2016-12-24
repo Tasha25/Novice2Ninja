@@ -5,6 +5,14 @@
   </span>
   <%= @story.name %>
 </h2>
+<ul id="vote_history">
+  <% if @story.votes.empty? %>
+  <em>No votes yet!</em>
+  <% else %>
+  <%= render partial:'votes/vote',
+  collection: @story.votes.latest %>
+  <% end %>
+</ul>
 <p>
   <%= link_to @story.link, @story.link %>
 </p>
@@ -13,3 +21,15 @@
   <%= submit_tag "Vote for it" %>
   <% end %>
 </div>
+
+<!---
+This is another way of creating the form using the form_for.
+
+<div id="vote_form">
+<%= form_for [ @story, Vote.new ], remote: true do |f| %>
+<%= f.submit 'Vote for it' %>
+<% end %>
+</div>
+
+
+-->
