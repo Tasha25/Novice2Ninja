@@ -1,12 +1,11 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
+  id: 1
   name: My old weblog
   link: http://ruprict.net/
 
 two:
+  id: 2
   name: SitePoint Forums
   link: http://community.sitepoint.com
-
-
-  
