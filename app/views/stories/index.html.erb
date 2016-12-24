@@ -1,4 +1,12 @@
 
 
 A random link:
-<%= link_to @story.name, @story.link %>
+
+<!--let's change our front page so that the random link displayed no longer uses the story's external URL. Instead, we'll direct users to the story's internal page -->
+<%= link_to @story.name, story_path(@story) %>
+
+<!--
+or
+ shorter way to do the same thing
+<%= link_to @story.name, @story %>
+-->

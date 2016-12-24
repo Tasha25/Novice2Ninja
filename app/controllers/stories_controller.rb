@@ -19,8 +19,13 @@ class StoriesController < ApplicationController
     else # it is false and have them submit it again
       render action: 'new'
     end
-    
+
   end
+
+  def show
+    @story = Story.find(params[:id])
+  end
+
 
 
     def story_params
